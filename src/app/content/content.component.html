@@ -1,0 +1,61 @@
+<div class="main">
+
+  <button type="button" class="btn btn-info btn-large" data-toggle="modal" data-target="#myModal">Click to display the modal</button>
+
+  <!-- Modal ---------------------------------------------- -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="entryForm" (ngSubmit)="onSubmit()">
+            <div class="formContent">
+              <div class="formFields">
+                <div>
+                  <label for="accountName">Account name:&nbsp;&nbsp;</label>
+                  <input type="text" id="accountName" formControlName="accountName" class="formControl">
+                </div>
+                <div>
+                  <label for="accountNumber">Account number:&nbsp;&nbsp;</label>
+                  <input type="text" id="accountNumber" formControlName="accountNumber" class="formControl">
+                </div>
+                <div>
+                  <label for="accountBalance">Account balance:&nbsp;&nbsp;</label>
+                  <input type="text" id="accountBalance" formControlName="accountBalance" class="formControl">
+                </div>
+              </div> <!-- formFields-->
+              <div class="submitButton">
+                <button type="submit">Submit</button>
+              </div>
+            </div> <!-- formContent -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" [ngStyle]="{'width': '100px'}">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ----------------------------------------------------- -->
+  
+  <div>
+  <button class="toggle" (click)="isShown = !isShown">Toggle paragraph</button>
+  </div>
+
+  <div class="display">
+    <p *ngIf="isShown; else alternative">{{toggledParagraph}}</p>
+    <ng-template #alternative>{{alternativeParagraph}}</ng-template>
+  </div>
+
+  <p *ngIf="isShown" [innerText]="text" [ngStyle]="{'color': 'red'}"></p>
+
+  <div>Account name: {{account.accountName}}</div>
+  <div>Account number: {{account.accountNumber}}</div>
+  <div>Account balance: {{account.accountBalance}}</div>
+
+</div>

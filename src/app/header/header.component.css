@@ -1,0 +1,15 @@
+.wrapper {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.heading {
+  width: 50%;
+  text-align: center;
+  height: 60px;
+  background-color: aquamarine;
+  line-height: 60px;
+  font-weight: 500;
+  margin: auto;
+  cursor: pointer;
+}
