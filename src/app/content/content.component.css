@@ -44,3 +44,7 @@ input {
 .submitButton {
   margin: auto;
 }
+
+.showInput {
+  margin-top: 60px;
+}

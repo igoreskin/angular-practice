@@ -54,8 +54,10 @@
 
   <p *ngIf="isShown" [innerText]="text" [ngStyle]="{'color': 'red'}"></p>
 
-  <div>Account name: {{account.accountName}}</div>
-  <div>Account number: {{account.accountNumber}}</div>
-  <div>Account balance: {{account.accountBalance}}</div>
+  <div class="showInput">
+    <div>Account name: {{account.accountName}}</div>
+    <div>Account number: {{account.accountNumber}}</div>
+    <div>Account balance: {{account.accountBalance}}</div>
+  </div>
 
 </div>

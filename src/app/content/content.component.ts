@@ -20,6 +20,8 @@ export class ContentComponent implements OnInit {
 
   data;
   formInfo; 
+  formValid = false;
+
   account = {
     accountName: '',
     accountNumber: '',
@@ -61,7 +63,7 @@ export class ContentComponent implements OnInit {
     this.account.accountNumber = this.entryForm.value.accountNumber;
     this.account.accountBalance = this.entryForm.value.accountBalance;
 
-    console.log(this.formInfo)
+    console.log(this.entryForm.valid)
     this.entryForm.reset();
 
     console.log(this.account)
